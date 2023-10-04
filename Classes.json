@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Barde",
+        "explanation": "Bardes are a supporter class, they can be very good healers or support otherwise with their ability bardic inspiration, which boosts a certain attribute of the one its used on. ",
+        "details": "Bardes mainly use their Charisma attribute so you'd that oe to be their highest."
+    },
+    {
+        "name": "Barbarian",
+        "explanation": "Barbarians are a class that's for the most part just brute force, depending on how your Dungeon Master does it they either cant cast magic und any circumstances or are able to cast spells so in certain cases and/or circumstances. I They are good fr players that dont like to think too hard about their next move will be and just want to attack rather than play tactical. One of their core abilities is to rag and be even more powerfull for a set amount of time, depending on what path they choose, they can also either be more durable, make even more damage or be better at dodging atacks. ",
+        "details": "."
+    },
+    {
+        "name": "Rouge",
+        "explanation": "Rouges are criminals, assassuns, thiefs, scoundrels in general. ",
+        "details": "Rouges need their Dexterity attribute the most so you would wan't it to be the highest attribute your character has, if you're playing a rouge"
+    },
+    {
+        "name": "Ranger",
+        "explanation": "Rangers are basically the D&D version of a hunter. In most cases they are depicted with a bow in hands and aiming at something. ",
+        "details": "."
+    },
+    {
+        "name": "Cleric",
+        "explanation": "Clerics are a really complicated class due to their versatility. Theres pretty much nothing a cleric cant do, but you'll have to choose a certain path, which gives you certain abilities. They can channel the power of a deity, like if its a deity of light they can cast healing spells or if their deity is one of war they can cast more spells that make a lot of damage. Because there ae so many deities in the world of D&D, playing a cleric gives you a wide range ",
+        "details": "."
+    },
+    {
+        "name": "Paladin",
+        "explanation": "Paldins are a class that is often depicted as the leader of a group and yes they can be great leaders, but it always depends on how the player actually plays them. Paladins are basically knights that have sworn a oath, that can be anything like \" You shall only do harm to protect others.\" or \" You shall never harm the innocent.\" As you can see a Paladins Oath is a kind of Guideline which they follow. In most cases its something righteous, ",
+        "details": ""
+    },
+    {
+        "name": "Wizard",
+        "explanation": "",
+        "details": "."
+    },
+    {
+        "name": "Sorcerer",
+        "explanation": "",
+        "details": "."
+    },
+    {
+        "name": "Warlock",
+        "explanation": "",
+        "details": "."
+    },
+    {
+        "name": "Monk",
+        "explanation": "",
+        "details": "."
+    },
+    {
+        "name": "Druid",
+        "explanation": "",
+        "details": "."
+    },
+    {
+        "name": "Fighter",
+        "explanation": "",
+        "details": "."
+    }
+]

@@ -1,0 +1,20 @@
+ [
+    {"alignment": "lawful good",
+     "example": "Superman"},
+    {"alignment": "lawful neutral",
+     "example": ""},
+    {"alignment": "Lawful evil",
+     "example": ""},
+    {"alignment": "Neutral good",
+     "example": ""},
+    {"alignment": "Neutral neutral/ true neutral",
+     "example": ""},
+    {"alignment": "Neutral evil",
+     "example": ""},
+    {"alignment": "chaotic good",
+     "example": ""},
+    {"alignment": "chaotic neutral",
+     "example": "Jack Sparrow"},
+    {"alignment": "chaotic evil",
+     "example": "The Joker"}
+]
