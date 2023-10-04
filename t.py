@@ -161,15 +161,36 @@ if character_race_input == 'tiefling':
 elif character_race_input == 'dwarf':
     player_character[0]["character-race"] = "Dwarf"
     player_character[0]["constitution-attribute"] += 2
-    Dwarf_subrace_input = str(input("There are 3 types of dwarfs in D&D. The standard dwarf, the mountain dwarf "
-                                    "and the hill dwarf"))
-    Dwarf_subrace_input = Dwarf_subrace_input.lower()
-    while Dwarf_subrace_input.startswith("/explanation" or "/details"):
-        if Dwarf_subrace_input == '/explanation hill dwarf':
+    Dwarf_subrace_exinput = str(input("There are 3 types of dwarfs in D&D. The standard dwarf, the mountain dwarf "
+                                    "and the hill dwarf. you can now ask for an explanation or the technical details,"
+                                    " the same as before with the classes and races. So /explanation for an explaation "
+                                    "and /details for the technical details. And if you're ready to choose the subrace,"
+                                    " just press ENTER."))
+    Dwarf_subrace_exinput = Dwarf_subrace_exinput.lower()
+    while Dwarf_subrace_exinput.startswith("/explanation" or "/details"):
+        if Dwarf_subrace_exinput == '/explanation hill dwarf':
             print("Hill dwarfs are a subrace of dwarfs that ")
-        if Dwarf_subrace_input == '/details hill warfs':
+        if Dwarf_subrace_exinput == '/details hill warfs':
             print("Hill dwarfs have a +1 in wisdom")
-        if Dwarf_subrace_input == '/explanation Mountain dwarfs':
+        if Dwarf_subrace_exinput == '/explanation Mountain dwarfs':
             print("Mountain dwarfs are ......")
+        if Dwarf_subrace_exinput == '/details mountain ':
+            print("Mountain dwarfs have a +2 in your strength attribute.")
+    Dwarf_subrace_exinput = str(input("if you need any other explanations or details, you can just aks again. "
+                                    "And if you're done just press ENTER."))
+
+Dwarf_subrace_input = str(input("Now which dwarven subrace have you decided on ? "
+                                "The regular-, hill- or mountain-dwarf ?"))
+Dwarf_subrace_input = Dwarf_subrace_input.lower()
+
+if Dwarf_subrace_input == "hill dwarf":
+    player_character[0]["character-race"] = "Hill dwarf"
+    player_character[0]["wisdom-attribute"] += 1
+elif Dwarf_subrace_input == "regular dwarf" or "dwarf":
+    player_character[0]["character-race"] = "Dwarf"
+elif Dwarf_subrace_input == "Mountain dwarf":
+    player_character[0]["character-race"] = "Moutnain dwarf"
+    player_character[0]["strength-attribute"] += 2
+
 
 print(player_character[0]["character-class"], ["character-race"])
