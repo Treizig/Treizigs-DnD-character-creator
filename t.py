@@ -176,21 +176,20 @@ elif character_race_input == 'dwarf':
             print("Mountain dwarfs are ......")
         if Dwarf_subrace_exinput == '/details mountain ':
             print("Mountain dwarfs have a +2 in your strength attribute.")
-    Dwarf_subrace_exinput = str(input("if you need any other explanations or details, you can just aks again. "
+        Dwarf_subrace_exinput = str(input("if you need any other explanations or details, you can just aks again. "
                                     "And if you're done just press ENTER."))
 
-Dwarf_subrace_input = str(input("Now which dwarven subrace have you decided on ? "
+    Dwarf_subrace_input = str(input("Now which dwarven subrace have you decided on ? "
                                 "The regular-, hill- or mountain-dwarf ?"))
-Dwarf_subrace_input = Dwarf_subrace_input.lower()
+    Dwarf_subrace_input = Dwarf_subrace_input.lower()
 
-if Dwarf_subrace_input == "hill dwarf":
-    player_character[0]["character-race"] = "Hill dwarf"
-    player_character[0]["wisdom-attribute"] += 1
-elif Dwarf_subrace_input == "regular dwarf" or "dwarf":
-    player_character[0]["character-race"] = "Dwarf"
-elif Dwarf_subrace_input == "Mountain dwarf":
-    player_character[0]["character-race"] = "Moutnain dwarf"
-    player_character[0]["strength-attribute"] += 2
+    if Dwarf_subrace_input == "mountain dwarf":
+        player_character[0]["strength-attribute"] += 2
+        player_character[0]["character-race"] = "Moutnain dwarf"
+    elif Dwarf_subrace_input == "hill dwarf":
+        player_character[0]["character-race"] = "Hill dwarf"
+        player_character[0]["wisdom-attribute"] += 1
+    elif Dwarf_subrace_input == "regular dwarf" or "dwarf":
+        player_character[0]["character-race"] = "Dwarf"
 
-
-print(player_character[0]["character-class"], ["character-race"])
+print(player_character[0])
