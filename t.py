@@ -14,7 +14,10 @@ with open('Allignments.json') as json_file:
 with open('player_character.json') as json_file:
     player_character = json.load(json_file)
 
-user_input = str(input("Give me a command"))
+user_input = str(input("Give me a command. There are he following: /roll d4, 6, 8, 10, 12, 20. /character-creation."
+                       "with /roll you can roll a dice with the number of sides, that were mentioned before."
+                       "With /character-creation you can start the creation process of a character for "
+                       "Dungeons & Dragons."))
 
 if user_input == '/roll d4':
     print(str(random.randint(1, 4)))
@@ -31,7 +34,7 @@ elif user_input == '/roll d20':
 elif user_input == '/roll percentile dice':
     print(str(random.randint(00, 9)*10))
     print(str(random.randint(0, 9)))
-elif user_input == '/character creation':
+elif user_input == '/character-creation' or '/character creation':
     character_input = str(input("Would you like to create a character manuel or automatically generate one ?"
                                 " [manuel/automatic]"))
 
@@ -163,9 +166,9 @@ elif character_race_input == 'dwarf':
     player_character[0]["constitution-attribute"] += 2
     Dwarf_subrace_exinput = str(input("There are 3 types of dwarfs in D&D. The standard dwarf, the mountain dwarf "
                                     "and the hill dwarf. you can now ask for an explanation or the technical details,"
-                                    " the same as before with the classes and races. So /explanation for an explaation "
-                                    "and /details for the technical details. And if you're ready to choose the subrace,"
-                                    " just press ENTER."))
+                                    " the same as before with the classes and races. So /explanation for an explanation"
+                                    " and /details for the technical details. And if you're ready to choose the subrace"
+                                    ", just press ENTER."))
     Dwarf_subrace_exinput = Dwarf_subrace_exinput.lower()
     while Dwarf_subrace_exinput.startswith("/explanation" or "/details"):
         if Dwarf_subrace_exinput == '/explanation hill dwarf':
@@ -191,5 +194,10 @@ elif character_race_input == 'dwarf':
         player_character[0]["wisdom-attribute"] += 1
     elif Dwarf_subrace_input == "regular dwarf" or "dwarf":
         player_character[0]["character-race"] = "Dwarf"
-
-print(player_character[0])
+elif character_race_input == 'Gnome':
+    player_character[0]["character-race"] = "Gnome"
+    player_character[0]
+for character in player_character:
+    for key, value in character.items():
+        print(key + ":", value)
+    print()
