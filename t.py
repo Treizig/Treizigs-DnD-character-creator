@@ -157,27 +157,27 @@ while Race_exinput.startswith("/explanation" or "/details"):
 character_race_input = str(input("Which race would you like your character to be ?"))
 character_race_input = character_race_input.lower()
 
-if character_race_input == 'tiefling':
+if character_race_input == 'tiefling' or "Tiefling":
     player_character[0]["character-race"] = "Tiefling"
     player_character[0]["charisma-attribute"] += 2
     player_character[0]["intelligence-attribute"] = 1
-elif character_race_input == 'dwarf':
+elif character_race_input == 'dwarf' or "Dwarf":
     player_character[0]["character-race"] = "Dwarf"
     player_character[0]["constitution-attribute"] += 2
     Dwarf_subrace_exinput = str(input("There are 3 types of dwarfs in D&D. The standard dwarf, the mountain dwarf "
                                     "and the hill dwarf. you can now ask for an explanation or the technical details,"
                                     " the same as before with the classes and races. So /explanation for an explanation"
-                                    " and /details for the technical details. And if you're ready to choose the subrace"
+                                    " and /details for the technical details of the hill/mountain dwarfs. And if you're ready to choose the subrace"
                                     ", just press ENTER."))
     Dwarf_subrace_exinput = Dwarf_subrace_exinput.lower()
     while Dwarf_subrace_exinput.startswith("/explanation" or "/details"):
         if Dwarf_subrace_exinput == '/explanation hill dwarf':
             print("Hill dwarfs are a subrace of dwarfs that ")
-        if Dwarf_subrace_exinput == '/details hill warfs':
-            print("Hill dwarfs have a +1 in wisdom")
+        if Dwarf_subrace_exinput == '/details hill dwarfs':
+            print("Hill dwarfs have a +1 increase in your wisdom attribute")
         if Dwarf_subrace_exinput == '/explanation Mountain dwarfs':
             print("Mountain dwarfs are ......")
-        if Dwarf_subrace_exinput == '/details mountain ':
+        if Dwarf_subrace_exinput == '/details mountain dwarfs' or "/details mountain dwarf":
             print("Mountain dwarfs have a +2 in your strength attribute.")
         Dwarf_subrace_exinput = str(input("if you need any other explanations or details, you can just aks again. "
                                     "And if you're done just press ENTER."))
@@ -194,9 +194,49 @@ elif character_race_input == 'dwarf':
         player_character[0]["wisdom-attribute"] += 1
     elif Dwarf_subrace_input == "regular dwarf" or "dwarf":
         player_character[0]["character-race"] = "Dwarf"
-elif character_race_input == 'Gnome':
+
+
+elif character_race_input == 'Gnome' or "gnome":
     player_character[0]["character-race"] = "Gnome"
-    player_character[0]
+    player_character[0]["intelligence-attribute"] += 2
+    Gnome_subrace_exinput = str(input("There are 3 main types of gnomes in D&D. The standard gnome, the rock gnome and the "
+                                      "forest gnome. You can now ask for an explanation or the technical details, the "
+                                      "same way as before with the classes and races. So /explanation for an "
+                                      "explanation or /details for the technical details of the rock/forest gnomes. And if you are ready to "
+                                      "choose the subrace you want your character to be, just press ENTER"))
+    Gnome_subrace_exinput = Gnome_subrace_exinput.lower()
+    while Gnome_subrace_exinput.startswith("/explanation" or "/details"):
+        if Gnome_subrace_exinput == '/explanation forest gnome' or '/explanation forest gnomes' :
+            print("forest gnomes are a subrace of gnomes that live, as the name suggests, in forests. They are the "
+                  "smallest subrace of gnomes.")
+        elif Gnome_subrace_exinput == "/explanation rock gnome" or "/explanation rock gnomes":
+            print("Rock gnomes are the subrace of gnomes, that is the most common. ")
+        elif Gnome_subrace_exinput == "/details forest gnome" or "/details forest gnomes":
+            print("Forest gnomes have a +1 increase in your dexterity attribute")
+        elif Gnome_subrace_exinput == "/details rock gnomes" or "/details rock gnome":
+            print("Rock gnomes have a +1 increase in your constitution attribute.")
+        Gnome_subrace_exinput = str(input("If you need any other explanations or details, you can just ask again."
+                                          "And if you are done just press ENTER."))
+
+    Gnome_subrace_input = str(input("Now which gnome subrace have you decided on ?"
+                                "The regular-, forest- or rock-gnome ?"))
+    Gnome_subrace_input = Gnome_subrace_input.lower()
+
+    if Gnome_subrace_input == "regular-gnome" or "regular gnome" or "gnome":
+        player_character[0]["character-race"] = "Gnome"
+    elif Gnome_subrace_input == "rock-gnome" or "rock gnome":
+        player_character[0]["constitution-attribute"] += 1
+        player_character[0]["character-race"] = "Rock Gnome"
+    elif Gnome_subrace_input == "forest-gnome" or "forest gnome":
+        player_character[0]["dexterity-attribute"] += 1
+        player_character[0]["character-race"] = "Forest Gnome"
+
+
+elif character_race_input == "Elf" or "elf":
+    player_character
+
+
+
 for character in player_character:
     for key, value in character.items():
         print(key + ":", value)
