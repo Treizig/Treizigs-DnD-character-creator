@@ -233,7 +233,8 @@ elif character_race_input == 'Gnome' or "gnome":
 
 
 elif character_race_input == "Elf" or "elf":
-    player_character
+    player_character[0]["character-race"] = "Elf"
+    player_character[0]["dexterity-attribute"]
 
 
 
