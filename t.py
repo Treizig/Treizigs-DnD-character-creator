@@ -19,21 +19,16 @@ user_input = str(input("Give me a command. There are he following: /roll d4, 6, 
                        "With /character-creation you can start the creation process of a character for "
                        "Dungeons & Dragons."))
 
-if user_input == '/roll d4':
-    print(str(random.randint(1, 4)))
-elif user_input == '/roll d6':
-    print(str(random.randint(1, 6)))
-elif user_input == '/roll d8':
-    print(str(random.randint(1, 8)))
-elif user_input == '/roll d10':
-    print(str(random.randint(1, 10)))
-elif user_input == '/roll d12':
-    print(str(random.randint(1, 12)))
-elif user_input == '/roll d20':
-    print(str(random.randint(1, 20)))
-elif user_input == '/roll percentile dice':
+dices = ["2","6","8","10","12","20","percentile dice"]
+
+
+if user_input == '/roll percentile dice':
     print(str(random.randint(00, 9)*10))
     print(str(random.randint(0, 9)))
+elif user_input.startswith("/roll"):
+    for dice in range(len(dices)):
+        if user_input.replace("/roll d","").strip().lower() == dices[dice]:
+            print(str(random.randint(1, int(dices[dice]))))
 elif user_input == '/character-creation' or '/character creation':
     character_input = str(input("Would you like to create a character manuel or automatically generate one ?"
                                 " [manuel/automatic]"))
@@ -47,56 +42,21 @@ if character_input == 'manuel':
                               "If you want an explanation on how to build them, just ask the same way, but instead of"
                               "/explanation use /details."))
     print("if you're ready to choose a class for your character, just press ENTER")
-while class_exinput.startswith("/explanation" or "/details"):
 
-    if class_exinput == '/explanation Barde':
-        print(Class_list[0]["explanation"])
-    elif class_exinput == '/explanation Barbarian':
-        print(Class_list[1]["explanation"])
-    elif class_exinput == '/explanation Rouge':
-        print(Class_list[2]["explanation"])
-    elif class_exinput == '/explanation Ranger':
-        print(Class_list[3]["explanation"])
-    elif class_exinput == '/explanation Cleric':
-        print(Class_list[4]["explanation"])
-    elif class_exinput == '/explanation Paladin':
-        print(Class_list[5]["explanation"])
-    elif class_exinput == '/explanation Wizard':
-        print(Class_list[6]["explanation"])
-    elif class_exinput == '/explanation Sorcerer':
-        print(Class_list[7]["explanation"])
-    elif class_exinput == '/explanation Warlock':
-        print(Class_list[8]["explanation"])
-    elif class_exinput == '/explanation Monk':
-        print(Class_list[9]["explanation"])
-    elif class_exinput == '/explanation Druid':
-        print(Class_list[10]["explanation"])
-    elif class_exinput == '/explanation Fighter':
-        print(Class_list[11]["explanation"])
-    elif class_exinput == '/details Barde':
-        print(Class_list[0]["details"])
-    elif class_exinput == '/details Barbarian':
-        print(Class_list[1]["details"])
-    elif class_exinput == '/details Rouge':
-        print(Class_list[2]["details"])
-    elif class_exinput == '/details Ranger':
-        print(Class_list[3]["details"])
-    elif class_exinput == '/details Cleric':
-        print(Class_list[4]["details"])
-    elif class_exinput == '/details Paladin':
-        print(Class_list[5]["details"])
-    elif class_exinput == '/details Wizard':
-        print(Class_list[6]["details"])
-    elif class_exinput == '/details Sorcerer':
-        print(Class_list[7]["details"])
-    elif class_exinput == '/details Warlock':
-        print(Class_list[8]["details"])
-    elif class_exinput == '/details Monk':
-        print(Class_list[9]["details"])
-    elif class_exinput == '/details Druid':
-        print(Class_list[10]["details"])
-    elif class_exinput == '/details Fighter':
-        print(Class_list[11]["details"])
+
+classes = ["Barde","Barbarian","Rouge","Ranger","Cleric","Paladin","Wizard","Sorcerer","Warlock","Monk","Druid","Fighter"]
+
+
+
+while class_exinput.startswith("/explanation" or "/details"):
+    if class_exinput.startswith("/explanation"):
+        for classs in range(len(classes)):
+            if class_exinput.replace("/explanation", "").strip().lower() == classes[classs].strip().lower():
+                print(Classes[classs]["explanation"])
+    elif class_exinput.startswith("/details")
+        for classs in range(len(classes)):
+            if class_exinput.replace("/explanation", "").strip().lower() == classes[classs].strip().lower():
+                print(Classes[classs]["details" and "Attribute_Bonus"]):
     class_exinput = str(input("If you want the explanation of another class, you can just ask the same way again"))
 
 character_class_input = str(input("Now which class do you want "))
@@ -115,44 +75,22 @@ Race_exinput = str(input("If you want an explanation to one of them do its the s
                          "but this time with the race you want an explanation to."))
 
 
+races = ["tiefling","dwarf","gnome","elf","half_elf","half_orc","human","dragonborn"]
+
+
+
+
 while Race_exinput.startswith("/explanation" or "/details"):
-    if Race_exinput == '/explanation Tiefling':
-        print(Races[0]["explanation"])
-    elif Race_exinput == '/explanation Dwarf':
-        print(Races[1]["explanation"])
-    elif Race_exinput == '/explanation Gnome':
-        print(Races[2]["explanation"])
-    elif Race_exinput == '/explanation Elf':
-        print(Races[3]["explanation"])
-    elif Race_exinput == '/explanation Half_Elf':
-        print(Races[4]["explanation"])
-    elif Race_exinput == '/explanation Halfling':
-        print(Races[5]["explanation"])
-    elif Race_exinput == '/explanation Half_Orc':
-        print(Races[6]["explanation"])
-    elif Race_exinput == '/explanation Human':
-        print(Races[7]["explanation"])
-    elif Race_exinput == '/explanation Dragonborn':
-        print(Races[8]["explanation"])
-    elif Race_exinput == '/details Tiefling':
-        print(Races[0]["details" and "Attribute_Bonus"])
-    elif Race_exinput == '/details Dwarf':
-        print(Races[1]["details" and "Attribute_Bonus"])
-    elif Race_exinput == '/details Gnome':
-        print(Races[2]["details" and "Attribute_Bonus"])
-    elif Race_exinput == '/details Elf':
-        print(Races[3]["details" and "Attribute_Bonus"])
-    elif Race_exinput == '/details Half_Elf':
-        print(Races[4]["details" and "Attribute_Bonus"])
-    elif Race_exinput == '/details Halfling':
-        print(Races[5]["details" and "Attribute_Bonus"])
-    elif Race_exinput == '/details Half_Orc':
-        print(Races[6]["details" and "Attribute_Bonus"])
-    elif Race_exinput == '/details Human':
-        print(Races[7]["details" and "Attribute_Bonus"])
-    elif Race_exinput == '/details Dragonborn':
-        print(Races[8]["details" and "Attribute_Bonus"])
-    Race_exinput = str(input("If you want the explanation of another class, you can just ask the same way again"))
+    if Race_exinput.startswith("/explanation"):
+        for race in range(len(races)):
+            if Race_exinput.replace("/explanation", "").strip().lower() == races[race].strip().lower():
+                print(Races[race]["explanation"])
+    elif Race_exinput.startswith("/details")
+        for race in range(len(races)):
+            if Race_exinput.replace("/explanation", "").strip().lower() == races[race].strip().lower():
+                print(Races[race]["details" and "Attribute_Bonus"]):
+    Race_exinput = str(input("If you want the explanation of another race, you can just ask the same way again"))
+
 
 character_race_input = str(input("Which race would you like your character to be ?"))
 character_race_input = character_race_input.lower()
@@ -241,4 +179,6 @@ elif character_race_input == "Elf" or "elf":
 for character in player_character:
     for key, value in character.items():
         print(key + ":", value)
+
     print()
+
