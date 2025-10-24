@@ -18,7 +18,7 @@ def print_options(items):
 
 def main():
     Races = load_json("races.json")
-    Characters = load_json("character.json")
+    Characters = load_json("player_character.json")
 
     command = input("Commands: /roll SIDES or /create\n").strip()
 
@@ -31,7 +31,7 @@ def main():
 
     elif command.startswith("/create"):
         create_character(Races, Characters)
-        save_json("character.json", Characters)
+        save_json("player_character.json", Characters)
 
     else:
         print("Unknown command. Try /roll or /create.")
