@@ -1,56 +1,101 @@
-[
-    {
-        "name": "Tiefling",
-        "Explanation": "Tieflings are an humanoid infernal race, that means that theres a demon or devil somewhere in their bloodline. Because of that they have horns and almost always a tail. They can also have regular human skin and just horns but its rather rare. Because of their looks they are often feared and discriminated against in the worlds of D&D.",
-        "Attribute_Bonus": ".",
-        "details": ""
+{
+    "deepling": {
+        "strength": 0,
+        "dexterity": 0,
+        "constitution": 0,
+        "intelligence": 1,
+        "wisdom": 0,
+        "charisma":2,
+        "alignment": ""
     },
-    {
-        "name": "Dwarf",
-        "Explanation": "You're probably familiar with the stereotype of dwarfs, these small but strong people that have a lot of knowledge about forging armor and weapons. In D&D they're exactly that. Due to their similarities they get along really well with Humans, Halflings, Elfs and Half-Elfs.",
-        "Attribute_Bonus": ".",
-        "details": ""
+    "dwarf":{
+        "strength": 0,
+        "dexterity": 0,
+        "constitution": 2,
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma":0,
+        "alignment": ""
     },
-    {
-        "name": "Gnome",
-        "Explanation": ".",
-        "Attribute_Bonus": ".",
-        "details": ""
+    "dwarf-mountain":{
+        "strength": 2,
+        "dexterity": 0,
+        "constitution": 2,
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma":0,
+        "alignment": ""
     },
-    {
-        "name": "Elf",
-        "Explanation": "Elfs are a race that are pretty similar to humans, but they got much older, up to 500 years to ber precise. Also they have pointy ears which they are famous for. They have a deep connection to nature which is why they often live in forests. Their jobs also often have to do with nature such as druid or ranger. ",
-        "Attribute_Bonus": ".",
-        "details": ""
+    "dwarf-hill":{
+        "strength": 0,
+        "dexterity": 0,
+        "constitution": 2,
+        "intelligence": 0,
+        "wisdom": 1,
+        "charisma":0,
+        "alignment": ""
     },
-    {
-        "name": "Half_Elf",
-        "Explanation": "Half-Elfs are similar to elfs but they're still different. Different to elfs they dont get quite as old and also dont have as deep of a connection to nature as elfs do, that's because they're half human and therefore are also more suited to live in cities.",
-        "Attribute_Bonus": ".",
-        "details": ""
+    "gnome":{
+        "strength": 0,
+        "dexterity": 0,
+        "constitution": 0,
+        "intelligence": 2,
+        "wisdom": 0,
+        "charisma":0,
+        "alignment": ""
     },
-    {
-        "name": "Halfling",
-        "Explanation": "Halflings are basically just hobbits. They're a small race similar to dwarfs, but arent as muscular as dwarfs are. They are just small humans and therefore get along rather well with them.",
-        "Attribute_Bonus": ".",
-        "details": ""
+    "gnome-rock":{
+        "strength": 0,
+        "dexterity": 0,
+        "constitution": 1,
+        "intelligence": 2,
+        "wisdom": 0,
+        "charisma":0,
+        "alignment": ""
     },
-    {
-        "name": "Half_Orc",
-        "Explanation": "Half_Orcs are as the name suggests half orc and the other half is as you might have guessed human. They arent very common due to the aggresive nature of Orcs so that its extremely rare that a orc and a human mate together.",
-        "Attribute_Bonus": ".",
-        "details": ""
+    "gnome-forest":{
+        "strength": 0,
+        "dexterity": 1,
+        "constitution": 0,
+        "intelligence": 2,
+        "wisdom": 0,
+        "charisma":0,
+        "alignment": ""
     },
-    {
-        "name": "Human",
-        "Explanation": "You should be familiar with humans because of the fact that you are one yourself. In D&D Humans are the most common race, because they are really adaptive and can survive in almost every environment.",
-        "Attribute_Bonus": ".",
-        "details": ""
+    "elf":{
+        "strength": 0,
+        "dexterity": 0,
+        "constitution": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma":0,
+        "alignment": ""
     },
-    {
-        "name": "Dragonborn",
-        "Explanation": "Dragonborn are a race thats not seen often in most of Faerun because they have one specific place where most of them live. They are basically humanoid Dragon creatures, othe than their ancestors (true dragons) they arent nearly as strong but same as them, have a breath weapon which corresponds to their type/color. For example red and golden dragons/dragonborns have a fire breath weapon, white and silver dragons have ice and blue ones have electricity, there are more but these are about the most important.",
-        "Attribute_Bonus": ".",
-        "details": ""
+    "zwölf":{
+        "strength": 2,
+        "dexterity": 2,
+        "constitution": 2,
+        "intelligence": 2,
+        "wisdom": 2,
+        "charisma":2,
+        "alignment": ""
+    },
+    "human":{
+        "strength": 0,
+        "dexterity": 0,
+        "constitution": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma":0,
+        "alignment": ""
+    },
+    "dragonborn":{
+        "strength": 0,
+        "dexterity": 0,
+        "constitution": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma":0,
+        "alignment": ""
     }
-]
+}
