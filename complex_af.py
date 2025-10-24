@@ -258,26 +258,23 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="D&D Helper CLI")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    # roll subcommand
     sp_roll = sub.add_parser("roll", help="Roll NdM dice, e.g. 3d6 or d20")
     sp_roll.add_argument("dice", type=str, help="Dice notation NdM (example: 3d6)")
 
-    # create subcommand
     sp_create = sub.add_parser("create", help="Create a character")
     sp_create.add_argument("--name", type=str, help="Character name (optional)")
     sp_create.add_argument("--class", dest="class_value", type=str, help="Character class (e.g. wizard)")
     sp_create.add_argument("--race", dest="race_value", type=str, help="Character race (e.g. elf)")
     sp_create.add_argument("--random", dest="randomize", action="store_true", help="Randomize class & race if not provided")
 
-    # list subcommand
+
     sp_list = sub.add_parser("list", help="List all characters")
 
-    # delete subcommand
     sp_delete = sub.add_parser("delete", help="Delete a character by index (use 'list' to see indices)")
     sp_delete.add_argument("index", type=int, help="Index of character to delete (0-based)")
 
-    # dragon subcommand
     sp_dragon = sub.add_parser("dragon", help="Show ASCII dragon (for morale)")
+    sp_help = sub.add_parser("help", help="Show help for all commands")
 
     args = parser.parse_args()
 
@@ -313,7 +310,24 @@ def main() -> None:
             print(Fore.RED + f"Invalid index: {idx}" + Style.RESET_ALL)
 
     elif args.command == "dragon":
-        print(Fore.MAGENTA + ASCII_DRAGON + Style.RESET_ALL)
+        print(Fore.RED + ASCII_DRAGON + Style.RESET_ALL)
+    elif args.command == "help":
+        print(Fore.CYAN + "D&D Helper CLI - Available Commands:" + Style.RESET_ALL)
+        print(Fore.GREEN + "  roll NdM        " + Fore.CYAN+ "  - " + Fore.YELLOW + "Roll dice using standard notation, e.g., 3d6 or d20" + Style.RESET_ALL)
+        print(Fore.GREEN + "  create [options]" + Fore.CYAN+ "  - " + Fore.YELLOW + "Create a character" + Style.RESET_ALL)
+        print(Fore.GREEN + "       --name     " + Fore.CYAN+ "  - " + Fore.YELLOW + "Optional character name" + Style.RESET_ALL)
+        print(Fore.GREEN + "       --class    " + Fore.CYAN+ "  - " + Fore.YELLOW + "Character class (e.g., wizard)" + Style.RESET_ALL)
+        print(Fore.GREEN + "       --race     " + Fore.CYAN+ "  - " + Fore.YELLOW + "Character race (e.g., elf)" + Style.RESET_ALL)
+        print(Fore.GREEN + "       --random   " + Fore.CYAN+ "  - " + Fore.YELLOW + "Randomize class & race if not provided" + Style.RESET_ALL)
+        print(Fore.GREEN + "  list            " + Fore.CYAN+ "  - " + Fore.YELLOW + "List all saved characters" + Style.RESET_ALL)
+        print(Fore.GREEN + "  delete INDEX    " + Fore.CYAN+ "  - " + Fore.YELLOW + "Delete character at given 0-based index" + Style.RESET_ALL)
+        print(Fore.GREEN + "  help            " + Fore.CYAN+ "  - " + Fore.YELLOW + "Show this help message" + Style.RESET_ALL)
+        print(Fore.CYAN + "\nExamples:" + Style.RESET_ALL)
+        print(Fore.MAGENTA + "  python complex_af.py roll 3d6" + Style.RESET_ALL)
+        print(Fore.MAGENTA + "  python complex_af.py create --random" + Style.RESET_ALL)
+        print(Fore.MAGENTA + "  python complex_af.py list" + Style.RESET_ALL)
+        print(Fore.MAGENTA + "  python complex_af.py delete 0" + Style.RESET_ALL)
+
 
 
 if __name__ == "__main__":
